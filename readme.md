@@ -9,7 +9,7 @@ If you want to avoid leaking the length of your secret, you should always pass t
 ## Install
 
 ```sh
-npm install --save crypto-timing-safe-equals
+npm install crypto-timing-safe-equals
 ```
 
 ## Usage
@@ -17,12 +17,14 @@ npm install --save crypto-timing-safe-equals
 ```ts
 import timingSafeEquals from 'crypto-timing-safe-equals';
 
-// Check if two strings are equal, in a timing-safe manner
+// Let's check if two strings are equal, in a timing-safe manner
 
+timingSafeEquals ( 'secret', 'secret' ); // => true
 timingSafeEquals ( 'secret', 'attempt' ); // => false
 
-// Check if two Uint8Arrays are equal, in a timing-safe manner
+// Let's check if two Uint8Arrays are equal, in a timing-safe manner
 
+timingSafeEquals ( new Uint8Array ([ 102, 111, 111 ]), new Uint8Array ([ 102, 111, 111 ]) ); // => true
 timingSafeEquals ( new Uint8Array ([ 102, 111, 111 ]), new Uint8Array ([ 98, 97, 114 ]) ); // => false
 ```
 
