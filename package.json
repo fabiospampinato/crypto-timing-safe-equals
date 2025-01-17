@@ -3,7 +3,7 @@
   "repository": "github:fabiospampinato/crypto-timing-safe-equals",
   "description": "An isomorphic timing-safe equality function for strings and Uint8Arrays.",
   "license": "MIT",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "module",
   "main": "dist/index.js",
   "exports": "./dist/index.js",
